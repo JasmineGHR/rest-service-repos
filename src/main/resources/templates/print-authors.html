@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+   <h1 th:text="${title}"></h1>
+   <table class="data-grid">
+   <tr>
+   <th>ID</th><th>Name</th><th>YearBorn</th>
+   </tr>
+      <tr th:each="a : ${authors}">
+         <td th:text="${a.id}"></td>
+         <td th:text="${a.name}"></td>
+         <td th:text="${a.yearBorn}"></td>
+      </tr>
+   </table>
+   
+
+</body>
+</html>
